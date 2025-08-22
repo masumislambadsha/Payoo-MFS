@@ -95,16 +95,19 @@
             <label for="" class="font-medium text-[16px] text-[#080808]"> Bank Account Number</label>
             <br>
             <input type="text" placeholder="Enter 11 digit account number" id="accountNumber" class="input bg-[#f4f5f7] mt-[12px] rounded-[32px] text-[16px] text-[#080808] w-full" />
+            <p class="font-medium text-[16px] text-[#ff0000]" id="accountNumberError"></p>
         </div>
         <div class="mb-[16px]">
             <label for="" class="font-medium text-[16px] text-[#080808]">Amount to Add</label>
             <br>
             <input type="text" id="addMoney" placeholder="Add Amount to withdraw"  class="input bg-[#f4f5f7] mt-[12px] rounded-[32px] text-[16px] text-[#080808]  w-full" />
+            <p class="font-medium text-[16px] text-[#ff0000]" id="amountError"></p>
         </div>
         <div  class="mb-[16px]">
             <label for="" class="font-medium text-[16px] text-[#080808]">Pin Number </label>
             <br>
             <input type="text" placeholder="Enter 4 digit pin number"  class="input bg-[#f4f5f7] mt-[12px] rounded-[32px] text-[16px] text-[#080808] w-full" id="pin"/>
+            <p class="font-medium text-[16px] text-[#ff0000]" id="pinError"></p>
         </div>
         <button  class="btn btn-primary w-full  mt-[16px]  rounded-[32px] bg-[#0874F2] h-[53px]" id="addMoneyBtn">Add Money</button>
     </form>
