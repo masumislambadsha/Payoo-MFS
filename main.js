@@ -8,4 +8,8 @@ const pin = parseInt(document.getElementById('pin').value)
     const currentBalance = parseInt(document.getElementById('current-balance').innerText)
 
 
+    const newBalance = currentBalance + addMoney
+    document.getElementById('current-balance').innerText = newBalance
+    document.getElementById('accountNumber').value = ''
+    console.log(newBalance)
 })
