@@ -10,15 +10,15 @@ const cashoutPin = parseInt(document.getElementById('cashoutPin').value)
     const currentBalance = parseInt(document.getElementById('current-balance').innerText)
 
     if ( agentNumber !=validAgentNumber ) {
-        document.getElementById('accountNumberError').innerText ='*Please Provide A Valid Account Number*'
+        document.getElementById('agentNumberError').innerText ='*Please Provide A Valid Account Number*'
         return
     }
     if (removeMoney < 0) {
-        document.getElementById('amountError').innerText ='*Please Provide A Valid Amount*'
+        document.getElementById('removeAmountError').innerText ='*Please Provide A Valid Amount*'
         return
     }
     if (cashoutPin != validPin) {
-        document.getElementById('pinError').innerText ='*Please Provide Correct PIN*'
+        document.getElementById('cashoutPinError').innerText ='*Please Provide Correct PIN*'
         return
     }
 
