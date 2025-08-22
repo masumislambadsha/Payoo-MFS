@@ -9,6 +9,7 @@ const pin = parseInt(document.getElementById('pin').value)
 
     if (accountNumber.length < 11) {
         alert('provide a valid number')
+        return
     }
 
     const newBalance = currentBalance + addMoney
