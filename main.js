@@ -33,3 +33,52 @@ const pin = parseInt(document.getElementById('pin').value)
     document.getElementById('amountError').innerText = ''
     console.log(newBalance)
 })
+const AgentNumber = 19296866940
+const validAgentNumber = parseInt(AgentNumber)
+const validCashoutPin = 1234
+document.getElementById('cashoutMoneyBtn').addEventListener('click', function (e) {
+    e.preventDefault()
+const agentNumber = document.getElementById('agentNumber').value
+const removeMoney = parseInt(document.getElementById('removeMoney').value)
+const cashoutPin = parseInt(document.getElementById('cashoutPin').value)
+
+    const currentBalance = parseInt(document.getElementById('current-balance').innerText)
+
+    if ( agentNumber !=validAgentNumber ) {
+        document.getElementById('agentNumberError').innerText ='*Please Provide A Valid Account Number*'
+        return
+    }
+    if (removeMoney < 0) {
+        document.getElementById('removeAmountError').innerText ='*Please Provide A Valid Amount*'
+        return
+    }
+    if (cashoutPin != validCashoutPin) {
+        document.getElementById('cashoutPinError').innerText ='*Please Provide Correct PIN*'
+        return
+    }
+
+    const newBalance = currentBalance - removeMoney
+    document.getElementById('current-balance').innerText = newBalance
+    document.getElementById('agentNumber').value = ''
+    document.getElementById('removeMoney').value = ''
+    document.getElementById('cashoutPin').value = ''
+    document.getElementById('cashoutPinError').innerText = ''
+    document.getElementById('agentNumberError').innerText = ''
+    document.getElementById('removeAmountError').innerText = ''
+    console.log(newBalance)
+})
+// toggle 
+document.getElementById('cash-in-btn').addEventListener('click', function(){
+          console.log('clicked')
+          const cashIn = document.getElementById('cash-in-section')
+          const cashOutSection = document.getElementById('cash-out-section')
+           cashIn.style.display = 'block'; 
+          cashOutSection.style.display ='none'
+        })
+document.getElementById('cash-out-btn').addEventListener('click', function(){
+          console.log('clicked')
+          const cashIn = document.getElementById('cash-in-section')
+          const cashOutSection = document.getElementById('cash-out-section')
+           cashIn.style.display = 'none'; 
+          cashOutSection.style.display ='block'
+        })
