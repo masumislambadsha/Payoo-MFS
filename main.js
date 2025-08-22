@@ -1,3 +1,5 @@
+const accountNumber = 12345678910
+const pin = 1234
 document.getElementById('addMoneyBtn').addEventListener('click', function (e) {
     e.preventDefault()
     const bank = document.getElementById('bank').value
