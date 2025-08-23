@@ -51,7 +51,7 @@ document.getElementById("addMoneyBtn").addEventListener("click", function (e) {
 });
 
 // Cash Out Functionality
-const AgentNumber = 19296866940;
+const AgentNumber =  12345678910;
 const validAgentNumber = parseInt(AgentNumber);
 const validCashoutPin = 1234;
 document
@@ -98,7 +98,7 @@ document
     console.log(newBalance);
   });
 // Transfer Money Functionality
-const UserNumber = 19296866940;
+const UserNumber =  12345678910;
 const validUserNumber = parseInt(UserNumber);
 const validTransPin = 1234;
 document.getElementById("sendMoneyBtn").addEventListener("click", function (e) {
@@ -166,7 +166,7 @@ document.getElementById("getBonusBtn").addEventListener("click", function (e) {
   document.getElementById("couponCoderError").innerText = "";
 });
 // payBill Functionality
-const validBillerNumber = 12345678910;
+const validBillerNumber =  12345678910;
 const validPayBillPin = 1234;
 document.getElementById("payBillBtn").addEventListener("click", function (e) {
   e.preventDefault();
