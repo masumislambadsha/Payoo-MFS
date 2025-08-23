@@ -138,6 +138,31 @@
     </form>
         
     </div>
+    <div id="transfer-section" class="hidden">
+            <h1 class="mt-5 font-bold">Transfer Money</h1>
+            <form action="" class=" rounded-xl p-[32px]  bg-[#ffffff]">
+        <div class="mb-[16px]">
+            <label for="" class="font-medium text-[16px] text-[#080808]">User Account Number</label>
+            <br>
+            <input type="text" placeholder="Enter 11 digit account number" id="userNumber" class="input bg-[#f4f5f7] mt-[12px] rounded-[32px] text-[16px] text-[#080808] w-full" />
+            <p class="font-medium text-[16px] text-[#ff0000]" id="userNumberError"></p>
+        </div>
+        <div class="mb-[16px]">
+            <label for="" class="font-medium text-[16px] text-[#080808]">Amount</label>
+            <br>
+            <input type="text" id="transMoney" placeholder="Enter amount to transfer"  class="input bg-[#f4f5f7] mt-[12px] rounded-[32px] text-[16px] text-[#080808]  w-full" />
+            <p class="font-medium text-[16px] text-[#ff0000]" id="transAmountError"></p>
+        </div>
+        <div  class="mb-[16px]">
+            <label for="" class="font-medium text-[16px] text-[#080808]">Pin Number </label>
+            <br>
+            <input type="text" placeholder="Enter 4 digit pin number"  class="input bg-[#f4f5f7] mt-[12px] rounded-[32px] text-[16px] text-[#080808] w-full" id="transPin"/>
+            <p class="font-medium text-[16px] text-[#ff0000]" id="transPinError"></p>
+        </div>
+        <button  class="btn btn-primary w-full  mt-[16px]  rounded-[32px] bg-[#0874F2] h-[53px]" id="sendMoneyBtn">Send Now </button>
+    </form>
+        
+    </div>
     </div>
 <script src="./main.js"></script>  
 

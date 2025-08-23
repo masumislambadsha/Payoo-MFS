@@ -1,3 +1,4 @@
+// Cash In Functionality
 const validAccountNumber = 12345678910
 const validPin = 1234
 document.getElementById('addMoneyBtn').addEventListener('click', function (e) {
@@ -33,6 +34,8 @@ const pin = parseInt(document.getElementById('pin').value)
     document.getElementById('amountError').innerText = ''
     console.log(newBalance)
 })
+
+// Cash Out Functionality
 const AgentNumber = 19296866940
 const validAgentNumber = parseInt(AgentNumber)
 const validCashoutPin = 1234
@@ -67,13 +70,50 @@ const cashoutPin = parseInt(document.getElementById('cashoutPin').value)
     document.getElementById('removeAmountError').innerText = ''
     console.log(newBalance)
 })
+// Transfer Money Functionality
+const UserNumber = 19296866940
+const validUserNumber = parseInt(UserNumber)
+const validTransPin = 1234
+document.getElementById('sendMoneyBtn').addEventListener('click', function (e) {
+    e.preventDefault()
+const userNumber = document.getElementById('userNumber').value
+const transMoney = parseInt(document.getElementById('transMoney').value)
+const transPin = parseInt(document.getElementById('transPin').value)
+
+    const currentBalance = parseInt(document.getElementById('current-balance').innerText)
+
+    if ( userNumber !=validUserNumber ) {
+        document.getElementById('userNumberError').innerText ='*Please Provide A Valid Account Number*'
+        return
+    }
+    if (transMoney < 0) {
+        document.getElementById('transAmountError').innerText ='*Please Provide A Valid Amount*'
+        return
+    }
+    if (transPin != validTransPin) {
+        document.getElementById('transPinError').innerText ='*Please Provide Correct PIN*'
+        return
+    }
+
+    const newBalance = currentBalance - transMoney
+    document.getElementById('current-balance').innerText = newBalance
+    document.getElementById('userNumber').value = ''
+    document.getElementById('transMoney').value = ''
+    document.getElementById('transPin').value = ''
+    document.getElementById('transPinError').innerText = ''
+    document.getElementById('userNumberError').innerText = ''
+    document.getElementById('transAmountError').innerText = ''
+    console.log(newBalance)
+})
 // toggle 
 document.getElementById('cash-in-btn').addEventListener('click', function(){
           console.log('clicked')
           const cashIn = document.getElementById('cash-in-section')
-          const cashOutSection = document.getElementById('cash-out-section')
+    const cashOutSection = document.getElementById('cash-out-section')
+    
            cashIn.style.display = 'block'; 
-          cashOutSection.style.display ='none'
+    cashOutSection.style.display = 'none'
+    
         })
 document.getElementById('cash-out-btn').addEventListener('click', function(){
           console.log('clicked')
