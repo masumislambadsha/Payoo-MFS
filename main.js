@@ -18,6 +18,10 @@ const pin = parseInt(document.getElementById('pin').value)
         document.getElementById('amountError').innerText ='*Please Provide A Valid Amount*'
         return
     }
+     if (addMoney === '') {
+        document.getElementById('transAmountError').innerText ='*Please Provide A Valid Amount*'
+        return
+    }
     if (pin != validPin) {
         document.getElementById('pinError').innerText ='*Please Provide Correct PIN*'
         return
@@ -55,6 +59,10 @@ const cashoutPin = parseInt(document.getElementById('cashoutPin').value)
         document.getElementById('removeAmountError').innerText ='*Please Provide A Valid Amount*'
         return
     }
+     if (removeMoney === '') {
+        document.getElementById('transAmountError').innerText ='*Please Provide A Valid Amount*'
+        return
+    }
     if (cashoutPin != validCashoutPin) {
         document.getElementById('cashoutPinError').innerText ='*Please Provide Correct PIN*'
         return
@@ -90,6 +98,10 @@ const transPin = parseInt(document.getElementById('transPin').value)
         document.getElementById('transAmountError').innerText ='*Please Provide A Valid Amount*'
         return
     }
+    if (transMoney === '') {
+        document.getElementById('transAmountError').innerText ='*Please Provide A Valid Amount*'
+        return
+    }
     if (transPin != validTransPin) {
         document.getElementById('transPinError').innerText ='*Please Provide Correct PIN*'
         return
@@ -105,20 +117,71 @@ const transPin = parseInt(document.getElementById('transPin').value)
     document.getElementById('transAmountError').innerText = ''
     console.log(newBalance)
 })
+// getBonus Functionality
+const coupon = 1111
+const validCoupon = parseInt(coupon)
+document.getElementById('getBonusBtn').addEventListener('click', function (e) {
+    e.preventDefault()
+const couponCode = document.getElementById('couponCode').value
+
+
+    const currentBalance = parseInt(document.getElementById('current-balance').innerText)
+
+    if ( couponCode !=validCoupon ) {
+        document.getElementById('couponCoderError').innerText ='*Please Provide A Valid Coupon Code*'
+        return
+    }
+    let getBonus = 5000
+   
+    const newBalance = currentBalance + getBonus
+    document.getElementById('current-balance').innerText = newBalance
+    document.getElementById('couponCode').value = ''
+    document.getElementById('couponCoderError').innerText = ''
+})
 // toggle 
 document.getElementById('cash-in-btn').addEventListener('click', function(){
           console.log('clicked')
           const cashIn = document.getElementById('cash-in-section')
     const cashOutSection = document.getElementById('cash-out-section')
-    
+    const transferMoney = document.getElementById('transfer-section')
+    const getBonus = document.getElementById('get-bonus-section')
            cashIn.style.display = 'block'; 
     cashOutSection.style.display = 'none'
+    transferMoney.style.display = 'none'
+    getBonus.style.display = 'none'
     
         })
 document.getElementById('cash-out-btn').addEventListener('click', function(){
           console.log('clicked')
           const cashIn = document.getElementById('cash-in-section')
-          const cashOutSection = document.getElementById('cash-out-section')
-           cashIn.style.display = 'none'; 
-          cashOutSection.style.display ='block'
+    const cashOutSection = document.getElementById('cash-out-section')
+    const transferMoney = document.getElementById('transfer-section')
+    const getBonus = document.getElementById('get-bonus-section')
+    cashIn.style.display = 'none'; 
+    cashOutSection.style.display = 'block'
+    transferMoney.style.display = 'none'
+    getBonus.style.display = 'none'
         })
+document.getElementById('transfer-btn').addEventListener('click', function(){
+          console.log('clicked')
+          const cashIn = document.getElementById('cash-in-section')
+    const cashOutSection = document.getElementById('cash-out-section')
+    const transferMoney = document.getElementById('transfer-section')
+    const getBonus = document.getElementById('get-bonus-section')
+    cashIn.style.display = 'none'; 
+    cashOutSection.style.display = 'none'
+    transferMoney.style.display = 'block'
+    getBonus.style.display = 'none'
+})
+document.getElementById('getBonus-btn').addEventListener('click', function(){
+          console.log('clicked')
+          const cashIn = document.getElementById('cash-in-section')
+    const cashOutSection = document.getElementById('cash-out-section')
+    const transferMoney = document.getElementById('transfer-section')
+    const getBonus = document.getElementById('get-bonus-section')
+    cashIn.style.display = 'none'; 
+    cashOutSection.style.display = 'none'
+    transferMoney.style.display = 'none'
+    getBonus.style.display = 'block'
+})
+        

@@ -61,11 +61,11 @@
             <img src="./assets/send1.png" class="mx-auto">
             <h3 class="light-color text-[14px]">Cashout</h3>
         </div>
-        <div class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid">
+        <div class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid" id="transfer-btn">
             <img src="./assets/money1.png" class="mx-auto">
             <h3 class="light-color text-[14px]">Transfer Money</h3>
         </div>
-        <div class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid gap-4">
+        <div class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid gap-4" id="getBonus-btn">
             <img src="./assets/bonus1.png" class="mx-auto">
             <h3 class="light-color text-[14px]">Get Bonus</h3>
         </div>
@@ -160,6 +160,19 @@
             <p class="font-medium text-[16px] text-[#ff0000]" id="transPinError"></p>
         </div>
         <button  class="btn btn-primary w-full  mt-[16px]  rounded-[32px] bg-[#0874F2] h-[53px]" id="sendMoneyBtn">Send Now </button>
+    </form>
+        
+    </div>
+<div id="get-bonus-section" class="hidden">
+            <h1 class="mt-5 font-bold">Get Bonus</h1>
+            <form action="" class=" rounded-xl p-[32px]  bg-[#ffffff]">
+        <div class="mb-[16px]">
+            <label for="" class="font-medium text-[16px] text-[#080808]">Enter Bonus Coupon</label>
+            <br>
+            <input type="text" placeholder="Enter your coupon" id="couponCode" class="input bg-[#f4f5f7] mt-[12px] rounded-[32px] text-[16px] text-[#080808] w-full" />
+            <p class="font-medium text-[16px] text-[#ff0000]" id="couponCoderError"></p>
+        </div>
+        <button  class="btn btn-primary w-full  mt-[16px]  rounded-[32px] bg-[#0874F2] h-[53px]" id="getBonusBtn">Get Bonus </button>
     </form>
         
     </div>
