@@ -15,7 +15,7 @@ const cashoutPin = parseInt(document.getElementById('cashoutPin').value)
     }
     if (removeMoney < 0) {
         document.getElementById('removeAmountError').innerText ='*Please Provide A Valid Amount*'
-        return
+        return 
     }
     if (cashoutPin != validPin) {
         document.getElementById('cashoutPinError').innerText ='*Please Provide Correct PIN*'
