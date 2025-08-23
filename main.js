@@ -3,6 +3,24 @@ document.getElementById('log-out-btn').addEventListener('click', function (e) {
     e.preventDefault()
 window.location.href="./index.html"
 })
+
+
+//function for toggling
+function toggle(idSec, idBtn ) {
+  const forms = document.getElementsByClassName('form')
+  for (const form of forms) {
+    form.style.display = 'none'
+  }
+  const toggle = document.getElementById(idSec).style.display = 'block'
+
+  const btns = document.getElementsByClassName('btns')
+  for (const btn of btns) {
+    btn.style.border = '1px solid #99a1af'
+  }
+  document.getElementById(idBtn).style.border ='2px solid #0874F2'
+  return toggle
+}
+
 // Cash In Functionality
 const validAccountNumber = 12345678910;
 const validPin = 1234;
@@ -195,7 +213,7 @@ document.getElementById("payBillBtn").addEventListener("click", function (e) {
     return;
   }
   if (payPin != validPayBillPin) {
-    document.getElementById("payPinError").innerText =
+    document.getElementById("ayPinError").innerText =
       "*Please Provide Correct PIN*";
     return;
   }
@@ -215,102 +233,25 @@ document.getElementById("payBillBtn").addEventListener("click", function (e) {
 
 // toggle
 document.getElementById("cash-in-btn").addEventListener("click", function () {
-  console.log("clicked");
-  const defaultSec = document.getElementById("default-section");
-  const cashIn = document.getElementById("cash-in-section");
-  const cashOutSection = document.getElementById("cash-out-section");
-  const transferMoney = document.getElementById("transfer-section");
-  const getBonus = document.getElementById("get-bonus-section");
-  const payBill = document.getElementById("pay-bill-section");
-  const transaction = document.getElementById('transaction-section')
-  defaultSec.style.display ='none'
-    cashIn.style.display = "block";
-    cashOutSection.style.display = "none";
-    transferMoney.style.display = "none";
-    getBonus.style.display = "none";
-    payBill.style.display = "none";
-    transaction.style.display = "none";
+  toggle('cash-in-section', 'cash-in-btn')
   });
 document.getElementById("cash-out-btn").addEventListener("click", function () {
-  console.log("clicked");
-   const defaultSec = document.getElementById("default-section");
-   const cashIn = document.getElementById("cash-in-section");
-   const cashOutSection = document.getElementById("cash-out-section");
-   const transferMoney = document.getElementById("transfer-section");
-   const getBonus = document.getElementById("get-bonus-section");
-   const payBill = document.getElementById("pay-bill-section");
-   const transaction = document.getElementById('transaction-section')
-   defaultSec.style.display ='none'
-    cashIn.style.display = "none";
-    cashOutSection.style.display = "block";
-    transferMoney.style.display = "none";
-    getBonus.style.display = "none";
-    payBill.style.display = "none";
-    transaction.style.display = "none";
+
+  toggle('cash-out-section', 'cash-out-btn')
 });
 document.getElementById("transfer-btn").addEventListener("click", function () {
-  console.log("clicked");
-   const defaultSec = document.getElementById("default-section");
-   const cashIn = document.getElementById("cash-in-section");
-   const cashOutSection = document.getElementById("cash-out-section");
-   const transferMoney = document.getElementById("transfer-section");
-   const getBonus = document.getElementById("get-bonus-section");
-   const payBill = document.getElementById("pay-bill-section");
-   const transaction = document.getElementById('transaction-section')
-   defaultSec.style.display ='none'
-    cashIn.style.display = "none";
-    cashOutSection.style.display = "none";
-    transferMoney.style.display = "block";
-    getBonus.style.display = "none";
-    payBill.style.display = "none";
-    transaction.style.display = "none";
+
+ toggle('transfer-section', 'transfer-btn')
 });
 document.getElementById("getBonus-btn").addEventListener("click", function () {
-  console.log("clicked");
-   const defaultSec = document.getElementById("default-section");
-   const cashIn = document.getElementById("cash-in-section");
-   const cashOutSection = document.getElementById("cash-out-section");
-   const transferMoney = document.getElementById("transfer-section");
-   const getBonus = document.getElementById("get-bonus-section");
-   const payBill = document.getElementById("pay-bill-section");
-   const transaction = document.getElementById('transaction-section')
-   defaultSec.style.display ='none'
-    cashIn.style.display = "none";
-    cashOutSection.style.display = "none";
-    transferMoney.style.display = "none";
-    getBonus.style.display = "block";
-    payBill.style.display = "none";
-    transaction.style.display = "none";
+
+  toggle('get-bonus-section', 'getBonus-btn')
 });
 document.getElementById("pay-bill-btn").addEventListener("click", function () {
-  console.log("clicked"); const defaultSec = document.getElementById("default-section");
-  const cashIn = document.getElementById("cash-in-section");
-  const cashOutSection = document.getElementById("cash-out-section");
-  const transferMoney = document.getElementById("transfer-section");
-  const getBonus = document.getElementById("get-bonus-section");
-  const payBill = document.getElementById("pay-bill-section");
-  const transaction = document.getElementById('transaction-section')
-  defaultSec.style.display ='none'
-    cashIn.style.display = "none";
-    cashOutSection.style.display = "none";
-    transferMoney.style.display = "none";
-    getBonus.style.display = "none";
-    payBill.style.display = "block";
-    transaction.style.display = "none";
+
+  toggle('pay-bill-section', 'pay-bill-btn')
 });
 document.getElementById("transaction-btn").addEventListener("click", function () {
-  console.log("clicked"); const defaultSec = document.getElementById("default-section");
-  const cashIn = document.getElementById("cash-in-section");
-  const cashOutSection = document.getElementById("cash-out-section");
-  const transferMoney = document.getElementById("transfer-section");
-  const getBonus = document.getElementById("get-bonus-section");
-  const payBill = document.getElementById("pay-bill-section");
-  const transaction = document.getElementById('transaction-section')
-  defaultSec.style.display ='none'
-    cashIn.style.display = "none";
-  cashOutSection.style.display = "none";
-  transferMoney.style.display = "none";
-  getBonus.style.display = "none";
-  payBill.style.display = "none";
-  transaction.style.display = "block";
+
+  toggle('transaction-section', 'transaction-btn' )
 });

@@ -55,48 +55,48 @@
     <div class="grid grid-cols-3 grid-rows-2 gap-[16px] mt-[24px]">
       <div
         id="cash-in-btn"
-        class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid"
+        class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid btns "
       >
         <img src="./assets/wallet1.png" class="mx-auto" />
         <h3 class="light-color text-[14px]">Add Money</h3>
       </div>
       <div
         id="cash-out-btn"
-        class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid"
+        class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid btns"
       >
         <img src="./assets/send1.png" class="mx-auto" />
         <h3 class="light-color text-[14px]">Cashout</h3>
       </div>
       <div
-        class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid"
+        class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid btns"
         id="transfer-btn"
       >
         <img src="./assets/money1.png" class="mx-auto" />
         <h3 class="light-color text-[14px]">Transfer Money</h3>
       </div>
       <div
-        class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid gap-4"
+        class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid btns"
         id="getBonus-btn"
       >
         <img src="./assets/bonus1.png" class="mx-auto" />
         <h3 class="light-color text-[14px]">Get Bonus</h3>
       </div>
       <div
-        class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid"
+        class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid btns"
         id="pay-bill-btn"
       >
         <img src="./assets/purse1.png" class="mx-auto" />
         <h3 class="light-color text-[14px]">Pay Bill</h3>
       </div>
       <div
-        class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid" id="transaction-btn"
+        class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid btns" id="transaction-btn"
       >
         <img src="./assets/transaction1.png" class="mx-auto" />
         <h3 class="light-color text-[14px]">Transactions</h3>
       </div>
     </div>
     <div class="all-form-section">
-      <div id="default-section">
+      <div id="default-section" class="form">
       <ul class="list bg-base-100 rounded-box shadow-md grid gap-3">
         <li class="p-4 pb-2 text-xs tracking-wide">
           <div class="flex justify-between items-center">
@@ -169,7 +169,7 @@
         </li>
       </ul>
     </div>
-      <div id="cash-in-section" class="hidden">
+      <div id="cash-in-section" class="hidden form">
         <h1 class="mt-5 font-bold">Add Money</h1>
         <form action="" class="rounded-xl p-[32px] bg-[#ffffff]">
           <div class="mb-[16px]">
@@ -238,7 +238,7 @@
           </button>
         </form>
       </div>
-      <div id="cash-out-section" class="hidden">
+      <div id="cash-out-section" class="hidden form">
         <h1 class="mt-5 font-bold">Cash Out</h1>
         <form action="" class="rounded-xl p-[32px] bg-[#ffffff]">
           <div class="mb-[16px]">
@@ -297,7 +297,7 @@
           </button>
         </form>
       </div>
-      <div id="transfer-section" class="hidden">
+      <div id="transfer-section" class="hidden form">
         <h1 class="mt-5 font-bold">Transfer Money</h1>
         <form action="" class="rounded-xl p-[32px] bg-[#ffffff]">
           <div class="mb-[16px]">
@@ -356,7 +356,7 @@
           </button>
         </form>
       </div>
-      <div id="get-bonus-section" class="hidden">
+      <div id="get-bonus-section" class="hidden form">
         <h1 class="mt-5 font-bold">Get Bonus</h1>
         <form action="" class="rounded-xl p-[32px] bg-[#ffffff]">
           <div class="mb-[16px]">
@@ -383,7 +383,7 @@
           </button>
         </form>
       </div>
-      <div id="pay-bill-section" class="hidden">
+      <div id="pay-bill-section" class="hidden form">
         <h1 class="mt-5 font-bold">Pay Bill</h1>
         <form action="" class="rounded-xl p-[32px] bg-[#ffffff]">
           <div class="mb-[16px]">
@@ -455,8 +455,7 @@
           </button>
         </form>
       </div>
-    </div>
-    <div id="transaction-section" class="hidden">
+      <div id="transaction-section" class="hidden form">
       <ul class="list bg-base-100 rounded-box shadow-md grid gap-3">
         <li class="p-4 pb-2 text-xs tracking-wide">
           <div class="flex justify-between items-center">
@@ -529,6 +528,8 @@
         </li>
       </ul>
     </div>
+    </div>
+    
     <script src="./main.js"></script>
   </body>
 </html>
