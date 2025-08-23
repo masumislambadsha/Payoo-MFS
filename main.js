@@ -1,3 +1,8 @@
+// Logout 
+document.getElementById('log-out-btn').addEventListener('click', function (e) {
+    e.preventDefault()
+window.location.href="./index.html"
+})
 // Cash In Functionality
 const validAccountNumber = 12345678910;
 const validPin = 1234;
