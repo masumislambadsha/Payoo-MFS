@@ -82,19 +82,93 @@
         <h3 class="light-color text-[14px]">Get Bonus</h3>
       </div>
       <div
-        class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid" id="pay-bill-btn"
+        class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid"
+        id="pay-bill-btn"
       >
         <img src="./assets/purse1.png" class="mx-auto" />
         <h3 class="light-color text-[14px]">Pay Bill</h3>
       </div>
       <div
-        class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid"
+        class="text-center py-[25px] px-[3px] border-1 border-gray-400 rounded-[12px] grid" id="transaction-btn"
       >
         <img src="./assets/transaction1.png" class="mx-auto" />
         <h3 class="light-color text-[14px]">Transactions</h3>
       </div>
     </div>
     <div class="all-form-section">
+      <div id="default-section">
+      <ul class="list bg-base-100 rounded-box shadow-md grid gap-3">
+        <li class="p-4 pb-2 text-xs tracking-wide">
+          <div class="flex justify-between items-center">
+            <h1 class="font-semibold text-[18px] title-color opacity-90">
+              Latest Payment
+            </h1>
+            <p class="font-normal text-[14px] light-color">View All</p>
+          </div>
+        </li>
+        <li class="list-row border-1 border-gray-200 rounded-[12px]">
+          <div class="flex justify-center items-center">
+            <img class="pl-2" src="./assets/wallet1.png" />
+          </div>
+          <div>
+            <div class="font-semibold text-[16px] title-color opacity-70">
+              Electricity Bill
+            </div>
+            <div class="text-[12px] font-normal opacity-70">Today 01:44 AM</div>
+          </div>
+
+          <button class="pr-2">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+        </li>
+        <li class="list-row border-1 border-gray-200 rounded-[12px]">
+          <div class="flex justify-center items-center">
+            <img class="pl-2" src="./assets/wallet1.png" />
+          </div>
+          <div>
+            <div class="font-semibold text-[16px] title-color opacity-70">
+              Bank Deposit
+            </div>
+            <div class="text-[12px] font-normal opacity-70">Today 01:44 AM</div>
+          </div>
+
+          <button class="pr-2">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+        </li>
+        <li class="list-row border-1 border-gray-200 rounded-[12px]">
+          <div class="flex justify-center items-center">
+            <img class="pl-2" src="./assets/wallet1.png" />
+          </div>
+          <div>
+            <div class="font-semibold text-[16px] title-color opacity-70">
+              Mobile Recharge
+            </div>
+            <div class="text-[12px] font-normal opacity-70">Today 01:44 AM</div>
+          </div>
+
+          <button class="pr-2">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+        </li>
+
+        <li class="list-row border-1 border-gray-200 rounded-[12px]">
+          <div class="flex justify-center items-center">
+            <img class="pl-2" src="./assets/wallet1.png" />
+          </div>
+          <div>
+            <div class="font-semibold text-[16px] title-color opacity-70">
+              Gas Bill
+            </div>
+            <div class="text-[12px] font-normal opacity-70">Today 01:44 AM</div>
+          </div>
+
+          <button class="pr-2">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
       <div id="cash-in-section" class="hidden">
         <h1 class="mt-5 font-bold">Add Money</h1>
         <form action="" class="rounded-xl p-[32px] bg-[#ffffff]">
@@ -309,40 +383,150 @@
         </form>
       </div>
       <div id="pay-bill-section" class="hidden">
-            <h1 class="mt-5 font-bold">Pay Bill</h1>
-            <form action="" class=" rounded-xl p-[32px]  bg-[#ffffff]">
-        <div class="mb-[16px]">
+        <h1 class="mt-5 font-bold">Pay Bill</h1>
+        <form action="" class="rounded-xl p-[32px] bg-[#ffffff]">
+          <div class="mb-[16px]">
             <h1 class="font-medium text-[16px]">Select To Pay</h1>
-            <select id="bill-catagory" class="select bg-[#f4f5f7] mt-[12px] rounded-[32px] text-[16px] text-[#080808] w-full">
-  <option disabled selected >Select </option>
-  <option>Water Bill</option>
-  <option>Electricity Bill</option>
-  <option>Wifi Bill</option>
-  <option>School Fee</option>
-</select>
-        </div>
-        <div class="mb-[16px]">
-            <label for="" class="font-medium text-[16px] text-[#080808]"> Biller Account Number</label>
-            <br>
-            <input type="text" placeholder="Enter account number" id="billerNumber" class="input bg-[#f4f5f7] mt-[12px] rounded-[32px] text-[16px] text-[#080808] w-full" />
-            <p class="font-medium text-[16px] text-[#ff0000]" id="billerNumberError"></p>
-        </div>
-        <div class="mb-[16px]">
-            <label for="" class="font-medium text-[16px] text-[#080808]">Amount to Pay</label>
-            <br>
-            <input type="text" id="payMoney" placeholder="Add Amount to pay"  class="input bg-[#f4f5f7] mt-[12px] rounded-[32px] text-[16px] text-[#080808]  w-full" />
-            <p class="font-medium text-[16px] text-[#ff0000]" id="payAmountError"></p>
-        </div>
-        <div  class="mb-[16px]">
-            <label for="" class="font-medium text-[16px] text-[#080808]">Pin Number </label>
-            <br>
-            <input type="text" placeholder="Enter 4 digit pin number"  class="input bg-[#f4f5f7] mt-[12px] rounded-[32px] text-[16px] text-[#080808] w-full" id="payPin"/>
-            <p class="font-medium text-[16px] text-[#ff0000]" id="payPinError"></p>
-        </div>
-        <button  class="btn btn-primary w-full  mt-[16px]  rounded-[32px] bg-[#0874F2] h-[53px]" id="payBillBtn">Pay Now</button>
-    </form>
-        
+            <select
+              id="bill-catagory"
+              class="select bg-[#f4f5f7] mt-[12px] rounded-[32px] text-[16px] text-[#080808] w-full"
+            >
+              <option disabled selected>Select</option>
+              <option>Water Bill</option>
+              <option>Electricity Bill</option>
+              <option>Wifi Bill</option>
+              <option>School Fee</option>
+            </select>
+          </div>
+          <div class="mb-[16px]">
+            <label for="" class="font-medium text-[16px] text-[#080808]">
+              Biller Account Number</label
+            >
+            <br />
+            <input
+              type="text"
+              placeholder="Enter account number"
+              id="billerNumber"
+              class="input bg-[#f4f5f7] mt-[12px] rounded-[32px] text-[16px] text-[#080808] w-full"
+            />
+            <p
+              class="font-medium text-[16px] text-[#ff0000]"
+              id="billerNumberError"
+            ></p>
+          </div>
+          <div class="mb-[16px]">
+            <label for="" class="font-medium text-[16px] text-[#080808]"
+              >Amount to Pay</label
+            >
+            <br />
+            <input
+              type="text"
+              id="payMoney"
+              placeholder="Add Amount to pay"
+              class="input bg-[#f4f5f7] mt-[12px] rounded-[32px] text-[16px] text-[#080808] w-full"
+            />
+            <p
+              class="font-medium text-[16px] text-[#ff0000]"
+              id="payAmountError"
+            ></p>
+          </div>
+          <div class="mb-[16px]">
+            <label for="" class="font-medium text-[16px] text-[#080808]"
+              >Pin Number
+            </label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 4 digit pin number"
+              class="input bg-[#f4f5f7] mt-[12px] rounded-[32px] text-[16px] text-[#080808] w-full"
+              id="payPin"
+            />
+            <p
+              class="font-medium text-[16px] text-[#ff0000]"
+              id="payPinError"
+            ></p>
+          </div>
+          <button
+            class="btn btn-primary w-full mt-[16px] rounded-[32px] bg-[#0874F2] h-[53px]"
+            id="payBillBtn"
+          >
+            Pay Now
+          </button>
+        </form>
+      </div>
     </div>
+    <div id="transaction-section" class="hidden">
+      <ul class="list bg-base-100 rounded-box shadow-md grid gap-3">
+        <li class="p-4 pb-2 text-xs tracking-wide">
+          <div class="flex justify-between items-center">
+            <h1 class="font-semibold text-[18px] title-color opacity-90">
+              Transaction History
+            </h1>
+            <p class="font-normal text-[14px] light-color">View All</p>
+          </div>
+        </li>
+        <li class="list-row border-1 border-gray-200 rounded-[12px]">
+          <div class="flex justify-center items-center">
+            <img class="pl-2" src="./assets/wallet1.png" />
+          </div>
+          <div>
+            <div class="font-semibold text-[16px] title-color opacity-70">
+              Electricity Bill
+            </div>
+            <div class="text-[12px] font-normal opacity-70">Today 01:44 AM</div>
+          </div>
+
+          <button class="pr-2">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+        </li>
+        <li class="list-row border-1 border-gray-200 rounded-[12px]">
+          <div class="flex justify-center items-center">
+            <img class="pl-2" src="./assets/wallet1.png" />
+          </div>
+          <div>
+            <div class="font-semibold text-[16px] title-color opacity-70">
+              Bank Deposit
+            </div>
+            <div class="text-[12px] font-normal opacity-70">Today 01:44 AM</div>
+          </div>
+
+          <button class="pr-2">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+        </li>
+        <li class="list-row border-1 border-gray-200 rounded-[12px]">
+          <div class="flex justify-center items-center">
+            <img class="pl-2" src="./assets/wallet1.png" />
+          </div>
+          <div>
+            <div class="font-semibold text-[16px] title-color opacity-70">
+              Mobile Recharge
+            </div>
+            <div class="text-[12px] font-normal opacity-70">Today 01:44 AM</div>
+          </div>
+
+          <button class="pr-2">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+        </li>
+
+        <li class="list-row border-1 border-gray-200 rounded-[12px]">
+          <div class="flex justify-center items-center">
+            <img class="pl-2" src="./assets/wallet1.png" />
+          </div>
+          <div>
+            <div class="font-semibold text-[16px] title-color opacity-70">
+              Gas Bill
+            </div>
+            <div class="text-[12px] font-normal opacity-70">Today 01:44 AM</div>
+          </div>
+
+          <button class="pr-2">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+        </li>
+      </ul>
     </div>
     <script src="./main.js"></script>
   </body>

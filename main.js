@@ -211,66 +211,101 @@ document.getElementById("payBillBtn").addEventListener("click", function (e) {
 // toggle
 document.getElementById("cash-in-btn").addEventListener("click", function () {
   console.log("clicked");
-  const cashIn = document.getElementById("cash-in-section");
-  const cashOutSection = document.getElementById("cash-out-section");
-  const transferMoney = document.getElementById("transfer-section");
-  const getBonus = document.getElementById("get-bonus-section");
-   const payBill = document.getElementById("pay-bill-section");
-   cashIn.style.display = "block";
-   cashOutSection.style.display = "none";
-   transferMoney.style.display = "none";
-   getBonus.style.display = "none";
-   payBill.style.display = "none";
-});
-document.getElementById("cash-out-btn").addEventListener("click", function () {
-  console.log("clicked");
-  const cashIn = document.getElementById("cash-in-section");
-  const cashOutSection = document.getElementById("cash-out-section");
-  const transferMoney = document.getElementById("transfer-section");
-  const getBonus = document.getElementById("get-bonus-section");
-   const payBill = document.getElementById("pay-bill-section");
-   cashIn.style.display = "none";
-   cashOutSection.style.display = "block";
-   transferMoney.style.display = "none";
-   getBonus.style.display = "none";
-   payBill.style.display = "none";
-});
-document.getElementById("transfer-btn").addEventListener("click", function () {
-  console.log("clicked");
-  const cashIn = document.getElementById("cash-in-section");
-  const cashOutSection = document.getElementById("cash-out-section");
-  const transferMoney = document.getElementById("transfer-section");
-  const getBonus = document.getElementById("get-bonus-section");
-   const payBill = document.getElementById("pay-bill-section");
-   cashIn.style.display = "none";
-   cashOutSection.style.display = "none";
-   transferMoney.style.display = "block";
-   getBonus.style.display = "none";
-   payBill.style.display = "none";
-});
-document.getElementById("getBonus-btn").addEventListener("click", function () {
-  console.log("clicked");
-  const cashIn = document.getElementById("cash-in-section");
-  const cashOutSection = document.getElementById("cash-out-section");
-  const transferMoney = document.getElementById("transfer-section");
-  const getBonus = document.getElementById("get-bonus-section");
-   const payBill = document.getElementById("pay-bill-section");
-   cashIn.style.display = "none";
-   cashOutSection.style.display = "none";
-   transferMoney.style.display = "none";
-   getBonus.style.display = "block";
-   payBill.style.display = "none";
-});
-document.getElementById("pay-bill-btn").addEventListener("click", function () {
-  console.log("clicked");
+  const defaultSec = document.getElementById("default-section");
   const cashIn = document.getElementById("cash-in-section");
   const cashOutSection = document.getElementById("cash-out-section");
   const transferMoney = document.getElementById("transfer-section");
   const getBonus = document.getElementById("get-bonus-section");
   const payBill = document.getElementById("pay-bill-section");
+  const transaction = document.getElementById('transaction-section')
+  defaultSec.style.display ='none'
+    cashIn.style.display = "block";
+    cashOutSection.style.display = "none";
+    transferMoney.style.display = "none";
+    getBonus.style.display = "none";
+    payBill.style.display = "none";
+    transaction.style.display = "none";
+  });
+document.getElementById("cash-out-btn").addEventListener("click", function () {
+  console.log("clicked");
+   const defaultSec = document.getElementById("default-section");
+   const cashIn = document.getElementById("cash-in-section");
+   const cashOutSection = document.getElementById("cash-out-section");
+   const transferMoney = document.getElementById("transfer-section");
+   const getBonus = document.getElementById("get-bonus-section");
+   const payBill = document.getElementById("pay-bill-section");
+   const transaction = document.getElementById('transaction-section')
+   defaultSec.style.display ='none'
+    cashIn.style.display = "none";
+    cashOutSection.style.display = "block";
+    transferMoney.style.display = "none";
+    getBonus.style.display = "none";
+    payBill.style.display = "none";
+    transaction.style.display = "none";
+});
+document.getElementById("transfer-btn").addEventListener("click", function () {
+  console.log("clicked");
+   const defaultSec = document.getElementById("default-section");
+   const cashIn = document.getElementById("cash-in-section");
+   const cashOutSection = document.getElementById("cash-out-section");
+   const transferMoney = document.getElementById("transfer-section");
+   const getBonus = document.getElementById("get-bonus-section");
+   const payBill = document.getElementById("pay-bill-section");
+   const transaction = document.getElementById('transaction-section')
+   defaultSec.style.display ='none'
+    cashIn.style.display = "none";
+    cashOutSection.style.display = "none";
+    transferMoney.style.display = "block";
+    getBonus.style.display = "none";
+    payBill.style.display = "none";
+    transaction.style.display = "none";
+});
+document.getElementById("getBonus-btn").addEventListener("click", function () {
+  console.log("clicked");
+   const defaultSec = document.getElementById("default-section");
+   const cashIn = document.getElementById("cash-in-section");
+   const cashOutSection = document.getElementById("cash-out-section");
+   const transferMoney = document.getElementById("transfer-section");
+   const getBonus = document.getElementById("get-bonus-section");
+   const payBill = document.getElementById("pay-bill-section");
+   const transaction = document.getElementById('transaction-section')
+   defaultSec.style.display ='none'
+    cashIn.style.display = "none";
+    cashOutSection.style.display = "none";
+    transferMoney.style.display = "none";
+    getBonus.style.display = "block";
+    payBill.style.display = "none";
+    transaction.style.display = "none";
+});
+document.getElementById("pay-bill-btn").addEventListener("click", function () {
+  console.log("clicked"); const defaultSec = document.getElementById("default-section");
+  const cashIn = document.getElementById("cash-in-section");
+  const cashOutSection = document.getElementById("cash-out-section");
+  const transferMoney = document.getElementById("transfer-section");
+  const getBonus = document.getElementById("get-bonus-section");
+  const payBill = document.getElementById("pay-bill-section");
+  const transaction = document.getElementById('transaction-section')
+  defaultSec.style.display ='none'
+    cashIn.style.display = "none";
+    cashOutSection.style.display = "none";
+    transferMoney.style.display = "none";
+    getBonus.style.display = "none";
+    payBill.style.display = "block";
+    transaction.style.display = "none";
+});
+document.getElementById("transaction-btn").addEventListener("click", function () {
+  console.log("clicked"); const defaultSec = document.getElementById("default-section");
+  const cashIn = document.getElementById("cash-in-section");
+  const cashOutSection = document.getElementById("cash-out-section");
+  const transferMoney = document.getElementById("transfer-section");
+  const getBonus = document.getElementById("get-bonus-section");
+  const payBill = document.getElementById("pay-bill-section");
+  const transaction = document.getElementById('transaction-section')
+  defaultSec.style.display ='none'
     cashIn.style.display = "none";
   cashOutSection.style.display = "none";
   transferMoney.style.display = "none";
   getBonus.style.display = "none";
-  payBill.style.display = "block";
+  payBill.style.display = "none";
+  transaction.style.display = "block";
 });
